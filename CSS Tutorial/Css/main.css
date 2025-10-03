@@ -1,0 +1,167 @@
+/* BASIC SYNTAX */
+/* body {
+  color: red;
+}
+h1 {
+  color: blue;
+}
+
+h1,
+h2 {
+  color: green;
+} */
+
+/* ID's should always be unique */
+
+/* COLOR PROPERTIES */
+/* COLOR BACKGROUND-COLOR */
+#first {
+  color: aliceblue;
+  background-color: blue;
+}
+#second {
+  color: brown;
+  background: aqua;
+}
+
+/* You could head to W3schools to learn color names */
+
+/* RGB RED GREEN BLUE */
+/* SYNTAX */
+body {
+  background: rgb(189, 230, 210);
+}
+
+/* RGBA 0-1 OPACITY */
+/* #first {
+  background: rgba(23, 55, 32, 0.56);
+} */
+
+/* 
+HSL
+HEX values #RRGGBB
+123456789 A(10) B(11) C(12) D(13) E(14) F(15)  
+          10 11 12 13 14 15
+          #FF0000 - RED
+          #00FF00 - GREEN
+*/
+
+#third {
+  color: #174f7c;
+}
+
+/* You could use coolors to select color palette */
+
+/*  FONT-SIZE (PX) ABSOLUTE  */
+#font {
+  font-size: 50px;
+  width: 200px;
+  height: 150px;
+  background: blue;
+}
+
+/* RELATIVE */
+
+.outer {
+  width: 500px;
+  height: 500px;
+  background: red;
+}
+.inner {
+  width: 50%;
+  height: 50%;
+  background: blue;
+}
+
+/* 
+em - Relative depends on the parent
+1em - 16px on default browser style 
+*/
+
+.div {
+  font-size: 10px;
+}
+.relative {
+  font-size: 2em;
+}
+.absolute {
+  font-size: 32px;
+}
+
+/* 
+rem - Relative depends on the root
+1rem - 16px on default browser style
+*/
+
+html {
+  font-size: 1rem;
+}
+
+/* Always make use of em or rem when changing font-size of parent or root to make website responsive  */
+.relative {
+  font-size: 2em;
+}
+.absolute {
+  font-size: 32px;
+}
+
+/* em values depend on the parent while rem values depend on the root i.e html */
+
+/* 
+vw - width - percent of the screen
+vh - height - percent of the screen
+*/
+
+.banner {
+  width: 50vw;
+  height: 50vh;
+  background: red;
+}
+
+.header {
+  width: 100vw;
+  height: 100vh;
+  background: blue;
+}
+
+.navbar {
+  color: white;
+  height: 5rem;
+  background: #174f7c;
+  font-size: 3rem;
+}
+
+.footer {
+  background: red;
+  min-height: calc(100vh - 5rem);
+}
+
+/* TYPOGRAPHY */
+/* font size font family */
+/* font-stack generic font family
+serif sans-serif cursive fantasy monospace */
+
+/* GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap");
+
+.heading {
+  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+  /* font-family: "Roboto", sans-serif; */
+  font-family: "Akaya Kanadaka", system-ui;
+}
+
+.bold {
+  font-weight: bolder;
+  font-style: italic;
+}
+
+/* 
+text-align 
+text-indent
+and others...
+*/
+
+.bold {
+  text-align: center;
+  text-indent: 5rem;
+}
