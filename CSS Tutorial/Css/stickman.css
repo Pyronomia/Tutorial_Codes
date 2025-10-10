@@ -1,0 +1,128 @@
+.body-parts > * {
+  display: inline-block;
+}
+.head {
+  width: 2em;
+  height: 2em;
+  background: black;
+  border-radius: 50%;
+  animation: head 6s ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes head {
+  50% {
+    transform: translate(10em, 0.2em);
+  }
+  100% {
+    transform: translate(10em, 0.2em);
+  }
+}
+
+.body {
+  width: 0.6em;
+  height: 4em;
+  background: black;
+  animation: body 6s ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes body {
+  50% {
+    transform: translate(8.5em, 4em);
+  }
+  100% {
+    transform: translate(8.5em, 4em);
+  }
+}
+
+.circle {
+  width: 6em;
+  height: 6em;
+  /* background: yellow; */
+  border-radius: 50%;
+  position: relative;
+  animation: right-arm 6s ease-out;
+  animation-fill-mode: forwards;
+}
+
+.right-arm {
+  width: 0.35em;
+  height: 3em;
+  background: black;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+}
+
+@keyframes right-arm {
+  50% {
+    transform: translate(3.3em, 4.12em) rotate(90deg);
+  }
+  60% {
+    transform: translate(3.3em, 4.12em) rotate(45deg);
+  }
+  70% {
+    transform: translate(3.3em, 4.12em) rotate(135deg);
+  }
+  80% {
+    transform: translate(3.3em, 4.12em) rotate(45deg);
+  }
+  90% {
+    transform: translate(3.3em, 4.12em) rotate(135deg);
+  }
+  100% {
+    transform: translate(3.3em, 4.12em) rotate(90deg);
+  }
+}
+
+.left-arm {
+  width: 0.35em;
+  height: 3em;
+  background: black;
+  animation: left-arm 6s ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes left-arm {
+  50% {
+    transform: translate(6em, 2.8em) rotate(-90deg);
+  }
+  100% {
+    transform: translate(6em, 2.8em) rotate(-90deg);
+  }
+}
+
+.right-leg {
+  width: 0.4em;
+  height: 3em;
+  background: black;
+  animation: right-leg 6s ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes right-leg {
+  50% {
+    transform: translate(7.8em, 6.9em) skew(20deg);
+  }
+  100% {
+    transform: translate(7.8em, 6.9em) skew(20deg);
+  }
+}
+
+.left-leg {
+  width: 0.4em;
+  height: 3em;
+  background: black;
+  animation: left-leg 6s ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes left-leg {
+  50% {
+    transform: translate(5.85em, 6.9em) skew(-20deg);
+  }
+  100% {
+    transform: translate(5.85em, 6.9em) skew(-20deg);
+  }
+}
