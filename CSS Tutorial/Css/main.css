@@ -165,3 +165,495 @@ and others..
   text-align: center;
   text-indent: 5rem;
 }
+
+.google {
+  font-size: 3rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.text_stuff {
+  text-transform: capitalize;
+  text-decoration: line-through;
+}
+
+.one {
+  line-height: 1.5em;
+  text-decoration: overline;
+}
+.two {
+  letter-spacing: 0.2rem;
+  text-decoration: underline;
+}
+.three {
+  word-spacing: 0.9rem;
+}
+
+/* CSS BOX MODEL */
+/* 
+padding-top 
+padding-right
+padding-bottom
+padding-left
+*/
+
+/* 
+padding: (all) 
+padding: (top,bottom) (left,right)
+padding : top right bottom left
+*/
+
+/* 
+margin-top 
+margin-right
+margin-bottom
+margin-left
+*/
+
+/* 
+margin: (all) 
+margin: (top,bottom) (left,right)
+margin : top right bottom left
+*/
+
+/* 
+border-top 
+border-right
+border-bottom
+border-left
+*/
+
+/* 
+border: width style color
+*/
+
+/* 
+border-top-style 
+border-right-width
+border-bottom-size
+border-left
+
+all these options are available with border
+*/
+
+.three {
+  border: 7px solid black;
+  width: 400px;
+  /* border-radius: 1rem; */
+  /* border-radius: 50%; */
+  outline: 20px solid black;
+  outline-offset: 3px;
+  margin: 20px auto;
+}
+
+/* negative margin */
+/* margin: -100px */
+
+/* Default Display Property
+Block - Always starts on a new line 
+Inline -  Does not start on a new line and only take up as much space as content */
+
+/*
+ NOTE: BLOCK ELEMENTS CAN BE CENTERED USING WIDTH AND margin: (10px) auto 
+ INLIINE ELEMENTS CAN BE CENTERED USING text-align: center
+
+ Block level elements: top and bottom padding and margin respected
+ Inline level elements: top and bottom padding(gets overlayed) and margin not respected
+*/
+
+/* LIST-STYLE TYPE */
+ul li {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  list-style-type: armenian;
+}
+
+ul li {
+  display: inline-block;
+}
+
+/*
+display: none (totally removes element) 
+opacity: 0 (just hides it)
+visibility: hidden (just hides it)
+ */
+
+.big-img,
+.small-img,
+.folder-img {
+  /* width: 400px */
+  min-height: 100vh;
+  color: red;
+  font-size: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.big-img {
+  background: url("./big-img.jpg");
+  background-repeat: round; /*ensures it fits total  image even in repeats*/
+  background-position: center;
+  background-size: cover; /* ensures image completely covers the space but could  potentially distort small images and images where ratio differ will not be placed properly*/
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.small-img {
+  /* border: 2px solid red; */
+  background: linear-gradient(rgba(12, 13, 99, 0.6), rgba(123, 167, 189, 0.9)),
+    url("./small.jpg") center/cover no-repeat fixed;
+
+  /* IMPORTANT SYNTAX ABOVE */
+
+  background-repeat: no-repeat;
+  /* background-repeat: repeat-x;
+  background-repeat: repeat-y;
+  background-repeat: space; */
+  background-size: cover;
+  background-position: 50% 10%;
+  /* background-attachment: fixed; */
+}
+.folder-img {
+  background: url("./img/folder-img.webp");
+  /*background-size: contain;*/ /* keeps image ratio and could repeat image*/
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.six,
+.sev,
+.eig,
+.nin,
+.ten,
+.ele {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 5px;
+}
+
+.six {
+  background: linear-gradient(red, green);
+}
+
+.sev {
+  background: linear-gradient(to top, red, green, blue, purple);
+}
+
+.eig {
+  background: linear-gradient(315deg, blue, purple);
+}
+.nin {
+  background: linear-gradient(to top right, blue, purple);
+}
+.ten {
+  background: linear-gradient(rgba(45, 53, 12, 0.5), rgba(123, 189, 234, 0.9));
+}
+
+/* GRADIENT RESOURCES  - ultimate css gradient generator */
+
+/* 
+float property: enables you to put an elemnt ontop of another;
+You could float right or float left;
+
+Clear property: enables you to bypass/ignore the float attribute but you have to clear in the direction that was floated;
+
+Overflow property: enables you to keep an element within its boundaries of the screen when it has exceeded it  */
+
+.float {
+  border: 5px solid red;
+  position: static; /*returns to default position*/
+}
+
+/* position relative and absolute and fixed*/
+.img-float {
+  float: right;
+  /* position: relative; */
+  top: 20px;
+  /* left: 50%; */
+  right: 75%;
+  bottom: 40px;
+}
+
+.p {
+  width: 500px;
+  position: absolute;
+  top: 1100%;
+  right: 10%;
+}
+
+.button {
+  font-size: 20px;
+  background: red;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+/* Z-index -- does not work with position static
+only works with position relative or absolute*/
+.index {
+  /* clear: both; */
+  border: 5px solid red;
+  margin-top: 300px;
+  height: 500px;
+  position: relative;
+}
+.index img {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+
+.pon {
+  top: 10%;
+  left: 10%;
+  z-index: 1;
+}
+
+/* Pseudo elements 
+content property required
+it does not work with images; so if you want to use an image, place it in a div and select the div instead
+*/
+.pseudo::before {
+  content: "hello ";
+  display: block;
+  background: black;
+  font-weight: bold;
+  font-size: 2rem;
+  color: red;
+}
+
+.pseudo::after {
+  content: "";
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: green;
+}
+
+.res {
+  width: 50vw;
+  margin: 100px auto;
+  position: relative;
+  /* border: 2px solid red; */
+}
+
+.respon {
+  cursor: pointer;
+  width: 100%;
+  display: block; /*gets rid of annoying space at the bottom when using this property*/
+}
+
+.res::before {
+  content: "";
+  border: 3px solid red;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  top: -40px;
+  left: -40px;
+  z-index: -2;
+  transition: all 0.5s linear;
+}
+
+.res::after {
+  content: "";
+  background: red;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  top: -20px;
+  left: -20px;
+  z-index: -1;
+  transition: all 0.5s linear;
+}
+
+.res:hover::after,
+.res:hover::before {
+  top: 0;
+  left: 0;
+}
+
+/* Descendant and  child combinators  
+All children are descendants but not all descendants are children
+Meaning that children are direct descendants while descendants may not be directly related 
+*/
+
+/* ::first-line ::first-letter -- pseudo elements */
+/* :hover -- pseudo class  */
+/* Both are very straight forward.. just use them and then change your required  properties */
+
+/* link pseudo classes 
+:link -- works on all links
+:visited -- works on a link that has been visited
+:hover -- works on links you're hovering over
+:active -- works on a link as it is being clicked(literally a split second)
+ */
+
+/* :root -- allows you to make changes to the root */
+
+/* transform : translate() scale() rotate() skew() */
+
+.hey,
+.hi,
+.hello {
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+}
+
+.hey:hover,
+.hi:hover,
+.hello:hover {
+  background: coral;
+}
+
+.hey {
+  background: red;
+  /* transform: translateX(50%); */
+  /* transform: scaleX(1.5); */
+  /* transform: rotate(120deg); */
+  /* transform: rotateZ(120deg); same  thing as the one above */
+}
+.hi {
+  background: green;
+  /* transform: translateY(30px); */
+  /* transform: scaleY(2); */
+  /* transform: rotateX(135deg); */
+  /* transform: skewY(150deg); */
+}
+.hello {
+  background: blue;
+  /* transform: translate(30px, 70px); */
+  /* transform: scale(1.5, 1.5); */
+  /* transform: rotateY(20deg); */
+  /* transform: skewX(150deg); */
+
+  /* transition-property: background, border-radius; */
+  /* transition-duration: 3s, 2s; */
+  /* transition-delay: 1s; */
+
+  /* transition syntax
+  transition: (property) (duration) (timing-function) (delay), (property) (duration) (delay) (timing-function)
+  or just use "all" then it's once*/
+
+  transition: all 3s 1s;
+}
+
+.hello:hover {
+  border-radius: 50%;
+}
+
+.same {
+  width: 100px;
+  height: 100px;
+  background: blue;
+  color: white;
+  margin: 15px;
+  transition: all 1s;
+}
+
+.same:hover {
+  transform: translateX(100px);
+}
+
+.ease {
+  transition-timing-function: ease;
+}
+.linear {
+  transition-timing-function: linear;
+}
+.ease-in {
+  transition-timing-function: ease-in;
+}
+.ease-out {
+  transition-timing-function: ease-out;
+}
+.ease-in-out {
+  transition-timing-function: ease-in-out;
+}
+.linear {
+  transition-timing-function: linear;
+}
+
+/* ANIMATION */
+.transition,
+.animation {
+  width: 200px;
+  height: 100px;
+  color: white;
+  margin: 10px;
+}
+
+.transition {
+  background: red;
+  transition: all 2s linear;
+}
+
+.transition:hover {
+  background: yellow;
+  transform: translateX(100px);
+}
+
+.animation {
+  background: blue;
+  /* animation-name: move;
+  animation-duration: 10s;
+  animation-iteration-count: 2; */
+  animation: move 5s infinite;
+  /* animation-fill-mode allows you to keep the last state of the animation once the animation is done; forwards 
+  backwards does the opposite */
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(20px);
+  }
+  50% {
+    transform: translateX(100px);
+    background: red;
+  }
+  75% {
+    transform: translateX(-200px);
+    background: yellow;
+  }
+  100% {
+    transform: translateX(20px);
+    background: green;
+  }
+}
+
+/* CSS VARIABLES */
+/* --varname: property */
+:root {
+  --primaryColor: #f10d25;
+  --mainTransition: all 0.4s linear;
+}
+/* works with anything not only color and transition */
+.var {
+  color: var(--primaryColor);
+}
+
+/* ICONS 
+FONT AWESOME */
+
+.fa-truck {
+  color: #f10d25;
+  font-size: 3rem;
+}
+
+.man {
+  text-shadow: 3px 4px 5px red;
+}
+
+.box {
+  width: 300px;
+  height: 300px;
+  background: blue;
+  box-shadow: 5px 5px 2px #003;
+}
+
+/* Text shadow  and box shadow resources online */
