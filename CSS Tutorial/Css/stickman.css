@@ -41,7 +41,7 @@ body {
   box-shadow: 4px 4px 2px var(--auburn);
   padding-top: 1.5em;
   left: 50%;
-  animation: center 6s linear;
+  animation: center 4.5s linear;
   animation-fill-mode: forwards;
 }
 
@@ -67,7 +67,7 @@ body {
   background: rgb(4, 5, 4);
   z-index: 1;
   border-radius: 50%;
-  animation: head 6s ease-out;
+  animation: head 4.5s ease-out;
   animation-fill-mode: forwards;
 }
 
@@ -84,7 +84,7 @@ body {
   width: 0.6em;
   height: 4em;
   background: rgb(4, 5, 4);
-  animation: body 6s ease-out;
+  animation: body 4.5s ease-out;
   animation-fill-mode: forwards;
 }
 
@@ -104,7 +104,7 @@ body {
   z-index: -1;
   border-radius: 50%;
   position: relative;
-  animation: right-arm 6s ease-out;
+  animation: right-arm 4.5s ease-out;
   animation-fill-mode: forwards;
 }
 
@@ -142,7 +142,7 @@ body {
   width: 0.35em;
   height: 3em;
   background: rgb(4, 5, 4);
-  animation: left-arm 6s ease-out;
+  animation: left-arm 4.5s ease-out;
   animation-fill-mode: forwards;
 }
 
@@ -160,7 +160,7 @@ body {
   height: 3em;
   background: rgb(4, 5, 4);
 
-  animation: right-leg 6s ease-out;
+  animation: right-leg 4.5s ease-out;
   animation-fill-mode: forwards;
 }
 
@@ -177,7 +177,7 @@ body {
   width: 0.4em;
   height: 3em;
   background: rgb(4, 5, 4);
-  animation: left-leg 6s ease-out;
+  animation: left-leg 4.5s ease-out;
   animation-fill-mode: forwards;
 }
 
@@ -197,7 +197,7 @@ body {
   border-radius: 0.5em;
   box-shadow: 3px 3px 5px black;
   display: inline-block;
-  animation: text 6s linear;
+  animation: text 4.5s linear;
   animation-fill-mode: forwards;
   position: absolute;
   top: 5%;
