@@ -529,3 +529,318 @@ function ourRandomRange(ourMin, ourMax) {
 }
 
 console.log(ourRandomRange(0, 100));
+
+// ParseInt
+function convertToInteger(str) {
+  return parseInt(str, 2);
+}
+
+console.log(convertToInteger("10011"));
+
+// Radix specifies the base of the number in the string so it returns the number in base 10 when used
+
+// TERNARY OPERATOR (Another way of writing if/else statements)
+function checkEqual(a, b) {
+  return a === b ? true : false;
+}
+
+console.log(checkEqual("2", 2));
+
+// Nested Ternary Operators
+function checkSign(num) {
+  return num > 0 ? "positive" : num < 0 ? "negative" : "zero";
+}
+console.log(checkSign(-1));
+
+// let doesnt allow you to declare a variable twice but its possible to set a variable again once it has already been declared.. example below
+let catName = "Quincy";
+catName = "Beau";
+// This is allowed but if you use let twice it shows an error
+
+// USE STRICT.. prevents common coding mistakes
+
+// NOTE: the scope of let is a block scope i.e within these {} but var is not limited to that although when in a function it doesnt appear globally
+function checkScope() {
+  "use strict";
+  let i = "function scope";
+  if (true) {
+    let i = "block scope";
+    console.log("Block scope i is " + i);
+  }
+  console.log("Function scope i is " + i);
+  return i;
+}
+
+checkScope();
+
+// CONST - it is read only, you cannot re-assign a const
+
+function printManyTimes(str) {
+  "use strict ";
+
+  const SENTENCE = str + " is cool";
+
+  for (let i = 0; i < str.length; i += 2) {
+    console.log(SENTENCE);
+  }
+}
+
+printManyTimes("Free Code Camp");
+
+// An array defined using const cannot be re-assigned but can be mutated
+const s = [5, 7, 2];
+
+function mutateArray() {
+  "use strict";
+  s.push(2);
+  // or
+  s[0] = 3;
+  s[3] = 5;
+}
+mutateArray();
+console.log(s);
+
+// Freezing items in an object
+function freezeObj() {
+  "use strict";
+  const MATH_CONSTANTS = {
+    PI: 3.14,
+  };
+
+  Object.freeze(MATH_CONSTANTS);
+
+  try {
+    MATH_CONSTANTS.PI = 99;
+  } catch (ex) {
+    console.log(ex);
+  }
+
+  return MATH_CONSTANTS.PI;
+}
+
+const PI = freezeObj();
+
+console.log(PI);
+
+// ARROW FUNCTIONS
+const MAGIC = () => new Date();
+console.log(MAGIC());
+// ARROW FUNCTIONS with parameters
+const MYCONCAT = (arr1, arr2) => arr1.concat(arr2);
+console.log(MYCONCAT([1, 2], [3, 4, 5]));
+
+// higher order ARROW FUNCIONS
+const realNumberArray = [4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2];
+
+const squaredList = (arr) => {
+  const squaredIntegers = arr
+    .filter((num) => Number.isInteger(num) && num > 0)
+    .map((x) => x * x);
+  return squaredIntegers;
+};
+
+const squaredIntegers = squaredList(realNumberArray);
+console.log(squaredIntegers);
+
+// higher order ARROW FUNCIONS
+// Default functions
+const defaultFunction = function (number, value = 1) {
+  return number + value;
+};
+console.log(defaultFunction(5, 5));
+console.log(defaultFunction(5));
+
+// REST OPERATOR - Allows you to pass in any number of arguments in a function
+const sum = (...args) => {
+  return args.reduce((a, b) => a + b, 0);
+};
+console.log(sum(1, 8, 9, 10, 12));
+
+// SPREAD OPERATOR - spreads contents of an array into new variable which makes it so that if the former array is altered, the new variable isn't affected;
+const arrr1 = ["JAN", "FEB", "MAR", "APR", "MAY"];
+let arrr2;
+(function () {
+  arrr2 = [...arrr1];
+  arrr1[0] = "Potato";
+})();
+console.log(arrr2);
+
+// Destructuring assignment is a way of neatly assigning values taken from an object to a variable
+
+const voxel = { x: 3.6, y: 7.6, z: 6.5 };
+const { x: o, y: p, z: q } = voxel;
+console.log(q);
+
+// Explanation for whats happening above, the name after the equal to sign is the object from which we are assigning variable from
+// in the syntax before the equal to sign, x is a element in the object voxel and its value is being assigned to o. The same thing is happening to the others(y,z)
+
+// DESTRUCTURING IN NESTED OBJECTS
+const LOCAL_FORECAST = {
+  today: { min: 72, max: 83 },
+  tomorrow: { min: 73.3, max: 84.6 },
+};
+
+function getMaxOfTmrw(forecast) {
+  "use strict";
+
+  const {
+    tomorrow: { max: maxOfTomorrow },
+  } = forecast;
+
+  return maxOfTomorrow;
+}
+
+console.log(getMaxOfTmrw(LOCAL_FORECAST));
+
+// You can also destructure from an array but the difference is that you cant pick which element you're destructuring, it just goes in order according to the number of variables put in
+const [z, x, , y] = [1, 2, 3, 4, 5];
+console.log(z, x, y);
+
+// You can also switch the places of variables via destructuring
+var v = 8,
+  w = 6;
+(() => {
+  "use strict";
+  // v = w;
+  // w = v; this wont work!
+
+  [v, w] = [w, v];
+})();
+console.log(v);
+console.log(w);
+
+// you can use the rest operator to remove items from array and assign the rest of the items to a variable
+const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+function removeFirstTwo(list) {
+  const [, , ...arr] = list;
+
+  return arr;
+}
+
+const arr = removeFirstTwo(source);
+console.log(source);
+console.log(arr);
+
+// You can use destructuring to pass in  the only elements you need in an object into a function parameter rather than passing the whole object
+const stats = {
+  max: 56.78,
+  standard_deviation: 4.34,
+  median: 34.54,
+  mode: 23.87,
+  min: -0.75,
+  average: 35.85,
+};
+
+const half = function half({ max, min }) {
+  return (max + min) / 2.0;
+};
+console.log(stats);
+console.log(half(stats));
+
+// CREATING STRINGS USING TEMPLATE LITERALS
+const person = {
+  name: "Akintayo Sinmiloluwa",
+  age: 17,
+};
+
+// Template literal with multi-line interpolation
+const greeting = `Hello, my name is ${person.name}!
+I am ${person.age} years old.`;
+
+console.log(greeting);
+
+// Template literal project
+const result = {
+  success: ["max-length", "no-amd", "prefer-arrow-functions"],
+  failure: ["no-var", "var-on-top", "linebreak"],
+  skipped: ["id-blacklist", "no-dup-keys"],
+};
+function makeList(arr) {
+  const resultDisplayArray = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    resultDisplayArray.push(`<li class="text-warning">${arr[i]}</li>`);
+  }
+
+  return resultDisplayArray;
+}
+
+const resultDisplayArray = makeList(result.failure);
+console.log(resultDisplayArray);
+
+// If you want to create an object where the keys(properties) are equivalent to the values (in a function) you could use this shortcut
+const createPerson = (name, age, gender) => ({ name, age, gender });
+console.log(createPerson("Akintayo Sinmiloluwa", 17, "male"));
+
+// shortcut for writing a function inside an object
+const bicycle = {
+  gear: 2,
+  // setGear: function (newGear) {
+  //   "use strict";
+  //   this.gear = newGear;
+  // }, instead of doing this... do whats below
+  setGear(newGear) {
+    "use strict";
+    this.gear = newGear;
+  },
+};
+
+bicycle.setGear(3);
+console.log(bicycle.gear);
+
+// Using class syntax to create constructor function
+
+// let SpaceShuttle = function (targetPlanet) {
+//   this.targetPlanet = targetPlanet;
+// }; instead of this... do whats below
+
+class SpaceShuttle {
+  constructor(targetPlanet) {
+    this.targetPlanet = targetPlanet;
+  }
+}
+
+let zeus = new SpaceShuttle("Jupiter");
+console.log(zeus.targetPlanet);
+
+// GETTERS AND SETTERS
+// Getters allow you to get the value of an object's private variable without the user gaining access to that variable and setters allow you to  set a new value to that private variable while also running logic functions and potentially displaying error messages if some certain conditons are not met
+
+function makeClass() {
+  class Thermostat {
+    constructor(temp) {
+      this._temp = (5 / 9) * (temp - 32);
+    }
+
+    get temperature() {
+      return this._temp;
+    }
+
+    set temperature(updatedTemp) {
+      updatedTemp = (5 / 9) * (updatedTemp - 32);
+      if (updatedTemp < 20) {
+        throw console.error("Invalid Fahrenheit Temp");
+      }
+      this._temp = updatedTemp;
+    }
+  }
+
+  return Thermostat;
+}
+
+const Thermostat = makeClass();
+const thermos = new Thermostat(76);
+let temp = thermos.temperature;
+console.log(temp);
+thermos.temperature = 90;
+console.log(thermos.temperature);
+
+// IMPORT AND EXPORT
+import { capitalizeString } from "./string_function.js";
+console.log(capitalizeString("hey!"));
+
+// To import everything from a file
+import * as practiceImport from "./string_function.js";
+console.log(practiceImport);
+
+// To import a default export you would not put {} immediately after import
