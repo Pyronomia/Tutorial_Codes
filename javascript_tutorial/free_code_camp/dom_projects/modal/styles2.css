@@ -1,0 +1,86 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: url(./project-2.jpg) no-repeat center center/ cover;
+  position: relative;
+}
+
+#open-btn {
+  font-size: 1.3rem;
+  font-weight: 400;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  border: 1px solid #fff;
+  background: transparent;
+  box-shadow: 0 0 3px black;
+  position: absolute;
+  top: 70%;
+  left: 10%;
+  transition: background 0.35s linear, color 0.35s linear;
+}
+
+#open-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+#modal {
+  background: #fff;
+  width: 10rem;
+  height: 4rem;
+  padding: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.1rem;
+  line-height: 1.1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: animatemodal 0.4s;
+}
+
+.close-btn {
+  font-size: 2rem;
+  align-self: end;
+}
+
+.close-btn:hover {
+  cursor: pointer;
+  color: #ff0000;
+}
+
+#modal-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  box-shadow: 0 0 3px black;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Modal Animation Section  */
+
+@keyframes animatemodal {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+}

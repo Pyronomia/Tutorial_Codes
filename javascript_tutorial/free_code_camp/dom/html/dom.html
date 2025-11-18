@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+        background: linear-gradient(rgb(39, 39, 77), rgba(5, 5, 29, 0.644));
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      main {
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        border: 3px solid white;
+        border-radius: 0.5rem;
+        padding: 1.5em;
+      }
+
+      #movie-header {
+        color: white;
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+
+      #movie-header #text {
+        font-weight: 600;
+      }
+
+      .movies {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        line-height: 1.5;
+      }
+
+      .list-items {
+        font-size: 1.2rem;
+        margin-bottom: 2px;
+        padding: 0.3rem;
+        background: white;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div id="movie-header">
+          <h1 id="text">Favourite Movie Franchise</h1>
+        </div>
+        <ul class="movies">
+          <li class="list-items">The Matrix</li>
+          <li class="list-items">Star Wars</li>
+          <li class="list-items">Harry Potter</li>
+          <li class="list-items">Lord of the Rings</li>
+          <li class="list-items">Marvel</li>
+        </ul>
+      </div>
+    </main>
+  </body>
+  <script src="../javascript/dom.js"></script>
+</html>

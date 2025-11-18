@@ -101,7 +101,7 @@ var myyArray = [
 var myData = myyArray[0][1];
 console.log(myData);
 
-// Appending element to the end of an array (returns new)
+// Appending element to the end of an array (returns new length)
 myArray.push(["John", 23]);
 console.log(myArray);
 

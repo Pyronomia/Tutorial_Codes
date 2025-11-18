@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM3</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+        background: linear-gradient(rgb(39, 39, 77), rgba(5, 5, 29, 0.644));
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      main {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+      }
+
+      .heading {
+        color: white;
+        text-align: center;
+        font-weight: 600;
+        font-size: 2.5rem;
+      }
+
+      .container-2 {
+        width: 50rem;
+        height: 20rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .reveal-more {
+        min-width: 10rem;
+        width: 100%;
+        justify-content: center;
+      }
+
+      .boxes {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        background: transparent;
+        font-size: 1rem;
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+        text-align: center;
+        border: 1px solid white;
+      }
+
+      .hidden-content {
+        display: none;
+      }
+
+      .hidden-content.boxes {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <h1 class="heading">Event Listeners</h1>
+
+        <div class="container-2">
+          <button class="reveal-more boxes">Reveal More</button>
+
+          <div class="hidden-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis,
+            non. Inventore, ab? Officia voluptatem, voluptatum suscipit
+            perferendis soluta incidunt similique eum est optio nesciunt amet
+            nisi repudiandae tempora aliquid aliquam explicabo? Maxime quidem
+            repudiandae, aliquid officia dicta necessitatibus cum vitae ullam
+            distinctio placeat nulla similique beatae maiores quia eos tempore
+            alias! Ex nihil, placeat, fugiat magni iste eaque similique
+            doloremque dolores eum facere fuga! Consectetur sequi reprehenderit
+            odit quibusdam voluptatem ab sunt quis placeat repudiandae. In
+            voluptate, tempora voluptatum pariatur corrupti facilis eaque.
+            Aliquam aliquid quo rem quam quidem quae odio id! Ratione officiis
+            sed consectetur asperiores id ipsa reprehenderit.
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="../javascript/dom3.js"></script>
+</html>
