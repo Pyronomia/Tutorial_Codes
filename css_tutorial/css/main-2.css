@@ -1,0 +1,50 @@
+body {
+  background: yellow;
+}
+.banner {
+  background: blue;
+}
+
+.banner h1 {
+  color: white;
+  text-align: center;
+  text-transform: capitalize;
+  text-decoration: underline;
+}
+
+/* @media screen and (min-width: 37rem) {
+  body {
+    background: blue;
+  }
+  .banner {
+    background: red;
+  }
+  .banner h1 {
+    font-size: 40px;
+  }
+} */
+
+/* @media screen and (min-width: 40rem) {
+  body {
+    background: green;
+  }
+  .banner {
+    background: blue;
+  }
+  .banner h1 {
+    font-size: 60px;
+    text-transform: uppercase;
+  }
+} */
+
+@media screen and (max-width: 60rem) {
+  body {
+    background: blue;
+  }
+  .banner {
+    background: red;
+  }
+  .banner h1 {
+    font-size: 40px;
+  }
+}

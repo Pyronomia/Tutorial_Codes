@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: linear-gradient(
+          135deg,
+          rgba(0, 89, 255, 0.61),
+          rgba(55, 0, 128, 0.678),
+          rgba(98, 0, 255, 0.603)
+        );
+      }
+
+      main {
+        height: 100vh;
+        flex-direction: column;
+        display: flex;
+        gap: 0.9rem;
+        justify-content: center;
+        align-items: center;
+      }
+      .container-buttons {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+      }
+
+      .btn {
+        background: linear-gradient(
+          315deg,
+          rgba(133, 133, 219, 0.863),
+          rgba(133, 133, 219, 0.863),
+          black
+        );
+        opacity: 0.5;
+        padding: 1rem 1.4rem;
+        font-size: 1.3rem;
+        color: white;
+        border-radius: 0.5rem;
+        box-shadow: 1px 1px 2.5px black;
+        transition: all 0.5s;
+      }
+
+      .btn:hover {
+        background: linear-gradient(
+          315deg,
+          rgba(56, 56, 247, 0.541),
+          rgba(56, 56, 247, 0.541),
+          black
+        );
+        opacity: 1;
+      }
+
+      .answer {
+        display: none;
+        padding: 1rem 1.2rem;
+        background: white;
+        border-radius: 0.5rem;
+        box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.493);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container-buttons">
+        <button
+          onclick=" calculationStr += '1'
+              answer.innerText = calculationStr;
+        answer.style.display = 'block'"
+          class="one btn"
+        >
+          1
+        </button>
+        <button
+          onclick="calculationStr += '2'
+              answer.innerText = calculationStr;
+        answer.style.display = 'block'"
+          class="two btn"
+        >
+          2
+        </button>
+        <button
+          onclick="calculationStr += '3'
+              answer.innerText = calculationStr;
+        answer.style.display = 'block'"
+          class="three btn"
+        >
+          3
+        </button>
+        <button
+          onclick="calculationStr += '+'
+              answer.innerText = calculationStr;
+        answer.style.display = 'block'"
+          class="plus btn"
+        >
+          +
+        </button>
+        <button
+          onclick="calculationStr += '-'
+              answer.innerText = calculationStr;
+        answer.style.display = 'block'"
+          class="minus btn"
+        >
+          -
+        </button>
+        <button
+          onclick="
+          if (answer.innerText != ''){
+            calculationStr = answer.innerText
+          }
+
+           if(calculationStr == ''){
+                      answer.style.display='none'
+              alert('No input')
+          } else {
+              try{
+              answer.innerText=eval(calculationStr);
+              } catch (error){
+                alert('Write a proper equation!')
+            
+              } 
+          
+          answer.style.display='block'
+          console.log((calculationStr))
+          calculationStr = ''
+          }
+
+          //"
+          ;
+          class="equal-to btn"
+        >
+          =
+        </button>
+      </div>
+
+      <div class="answer"></div>
+    </main>
+  </body>
+  <script>
+    let calculationStr = "";
+    console.log(calculationStr);
+    let answer = document.querySelector(".answer");
+    console.log(answer);
+  </script>
+</html>
