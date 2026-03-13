@@ -81,9 +81,9 @@ function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
 
 console.log(wordBlanks("car", "good", "drove", "fast"));
 
-// when carrying out console.log on a function, it needs to have the return syntax within the function or else it will return undefined
+// when carrying out console.log on a function, it needs to have the return syntax within the function or else it will return undefined in the console
 
-//when calling out a function without console..log within the funciton, it will not return anything
+//when calling out a function without console..log within the funciton, it will not return anything in the console
 
 // Arrays allow you to store different elements(strings, numbers) in a place
 
