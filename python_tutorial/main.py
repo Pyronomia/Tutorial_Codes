@@ -143,8 +143,73 @@ print(result)
 # print(f"The circumference is: {round(circumference, 2)}cm")
 
 # Exercise 4 Calculate area of circle
-radius = float(input("Enter the radius of a circle: "))
-area = math.pi * pow(radius,2)
-print(f"The area of the circle is: {round(area, 2)}cm\u00b2")
+# radius = float(input("Enter the radius of a circle: "))
+# area = math.pi * pow(radius,2)
+# print(f"The area of the circle is: {round(area, 2)}cm\u00b2")
 
 #Stopped this session at 50:00
+
+# Exercise 5 Calculate hypotenus of a right angled triangle
+# a = float(input("Enter side A: "))
+# b = float(input("Enter side B: "))
+
+# c = math.sqrt(pow(a,2) + pow(b, 2))
+# print(f"Side C: {c}cm")
+
+# IF STATEMENTS
+# age = int(input("Enter your age: "))
+
+# if age >= 18:
+#     print("You are now signed up!")
+# elif age < 0:
+#     print("You haven't been born yet")
+# else: 
+#     print("You must be 18+ to sign up")
+
+# response = input("Would you like food? (Y/N): ")
+
+# if response == "Y":
+#     print("Have some food!")
+# else: 
+#     print("No food for you!")
+
+# You can just use booleans directly with if statements
+
+
+# PYTHON CALCULATOR
+# operator = input("Enter an operator (+ - * /): ")
+# num1 = float(input("Enter the 1st number: "))
+# num2 = float(input("Enter the 2nd number: "))
+
+# if operator == "+":
+#     result = num1 + num2
+#     print(round(result,3))
+# elif operator == "-":
+#     result = num1 - num2
+#     print(round(result,3))
+# elif operator == "*":
+#     result = num1 * num2
+#     print(round(result,3))
+# elif operator == "/":
+#     result = num1 / num2
+#     print(round(result,3))
+# else: 
+#     print(f"{operator} is not a valid operator")
+
+# PYTHON WEIGHT CONVERTER
+
+weight = float(input("Enter your weight: "))
+unit = input("Kilogram or Pounds? (K or L): ")
+
+if unit == "K":
+    weight = weight * 2.205
+    unit = 'Lbs.'
+    print(f"Your weight is: {round(weight, 1)}{unit} ")      
+elif unit == "L":
+    weight = weight / 2.205
+    unit = 'Kgs.'
+    print(f"Your weight is: {round(weight, 1)}{unit} ")
+else: print(f"{unit} was not valid")
+
+#Stopped this session at 1:14:00
+
