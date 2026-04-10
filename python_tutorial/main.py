@@ -29,7 +29,7 @@ is_student = True
 
 print(f"Are you a student? {is_student}")
 
-# DONT GET CONFUSED {} is used to diplay variables here in python, but in js it's used for something different
+# DONT GET CONFUSED {} is used to diplay variables here in python, but in js it's used for something different(template literals)
 
 # Potential use case of booleans
 if is_student:
@@ -198,18 +198,59 @@ print(result)
 
 # PYTHON WEIGHT CONVERTER
 
-weight = float(input("Enter your weight: "))
-unit = input("Kilogram or Pounds? (K or L): ")
+# weight = float(input("Enter your weight: "))
+# unit = input("Kilogram or Pounds? (K or L): ")
 
-if unit == "K":
-    weight = weight * 2.205
-    unit = 'Lbs.'
-    print(f"Your weight is: {round(weight, 1)}{unit} ")      
-elif unit == "L":
-    weight = weight / 2.205
-    unit = 'Kgs.'
-    print(f"Your weight is: {round(weight, 1)}{unit} ")
-else: print(f"{unit} was not valid")
+# if unit == "K":
+#     weight = weight * 2.205
+#     unit = 'Lbs.'
+#     print(f"Your weight is: {round(weight, 1)}{unit} ")      
+# elif unit == "L":
+#     weight = weight / 2.205
+#     unit = 'Kgs.'
+#     print(f"Your weight is: {round(weight, 1)}{unit} ")
+# else: print(f"{unit} was not valid")
 
 #Stopped this session at 1:14:00
 
+# Logical operators = evaluate multiple conditions(or, and, not)
+                    # or = at least one condition must be true 
+                    # and = both conditions must be true
+                    # not = inverts the condition (not false, not true)
+# OR
+# temp = -4
+# is_raining = False
+
+# if temp > 35 or temp < 0 or is_raining:
+#     print("The outdoor event is cancelled")
+# else:
+#     print("The outdoor event is still scheduled")
+
+#AND              
+temp = 22
+is_sunny = False
+
+if temp >= 28 and is_sunny:
+    print("It is HOT outside ")
+    print("It is SUNNY ")
+elif 28 > temp > 0  and is_sunny:
+    print("It is WARM outside ")
+    print("It is SUNNY ")
+elif 28 > temp > 0  and not is_sunny:
+    print("It is WARM outside ")
+    print("It is CLOUDY ")
+
+# Conditional expression = A one-line shortcut for the if-else statement (ternary operator)
+# Print or assign one of two values based on a condition
+# X if condition else Y
+
+num = -6
+a = 6
+b = 7
+
+print("Positive" if num > 0 else "Negative")
+result = "EVEN" if num % 2 == 0 else "ODD"
+print(result)
+
+max_num = a if a > b else b
+print(max_num)
