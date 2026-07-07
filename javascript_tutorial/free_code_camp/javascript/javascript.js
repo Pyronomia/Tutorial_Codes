@@ -652,7 +652,17 @@ console.log(defaultFunction(5));
 
 // REST OPERATOR - Allows you to pass in any number of arguments in a function
 const sum = (...args) => {
-  return args.reduce((a, b) => a + b, 0);
+  return args.reduce((a, b) => a + b, 0); /*Once the inputs are in an array, the .reduce() method is used to process the array down to a single value. It acts like a running tally.
+
+Here is a breakdown of its parts:
+
+0: This is the initial value (the starting point of your tally).
+
+a (Accumulator): This holds the running total of the addition so far. It starts at 0.
+
+b (Current Value): This is the current number in the array being processed.
+
+a + b: Every step of the loop, it adds the current number to the running total.*/
 };
 console.log(sum(1, 8, 9, 10, 12));
 
@@ -787,6 +797,7 @@ const bicycle = {
 
 bicycle.setGear(3);
 console.log(bicycle.gear);
+console.log(bicycle);
 
 // Using class syntax to create constructor function
 
