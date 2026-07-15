@@ -247,10 +247,153 @@ elif 28 > temp > 0  and not is_sunny:
 num = -6
 a = 6
 b = 7
+age = 18
 
 print("Positive" if num > 0 else "Negative")
 result = "EVEN" if num % 2 == 0 else "ODD"
 print(result)
 
 max_num = a if a > b else b
+min_num = a if a < b else b
+
+status = "Adult" if age >= 18 else "Child"
 print(max_num)
+print(min_num)
+print(status)
+
+# .functions in python
+# name = input("Enter Your Name: ")
+# phone_number = input("Enter Your Phone Number: ")
+# word = input("Enter Your Word: ")
+
+# finding the first instance of the index of a specific character
+# result = name.find("z") # if you type more than one character it returns the first letter there
+# finding the land instance of the index of a specific character
+# result = name.rfind("i") 
+#NOTE: if you type a character that is not there it will return the index of -1 
+# print(result)
+
+# Capitalizing the first letter
+# name = name.capitalize()
+# Lower all the letters
+# name = name.lower()
+# Makes everything uppercase
+# name = name.upper()
+# Returns a boolean if its only digits
+# name = name.isdigit()
+# Returns a boolean if its only alphabets
+# name = name.isalpha()
+
+# Counting the number of a specific character in a string
+# phone_number = phone_number.count("22") # You can group characters and it will count the grouped characters
+
+
+# APPLYING THIS ABOVE TO AN EXERCISE WE DID IN COS 103
+# vowels = "aeiouAEIOU"
+# total_count = 0
+# for count in vowels:
+#     total_count += word.count(count)
+
+# Replacing a particular character with another character
+# vowel_replace = word.replace("a", "HELLO")
+
+# APPLYING THIS ABOVE TO AN EXERCISE WE DID IN COS 103
+# for vowel in word:
+    # if vowel in vowels:
+        # word = word.replace(vowel, "*")
+
+
+
+# print(name)
+# print(phone_number)
+# print(total_count)
+# print(vowel_replace)
+# print(word)
+
+#NOTE: To Check String Functions
+# print(help(str))
+
+# VALIDATE USER INPUT EXERCISE
+# username must not be not be more than 12 characters
+# username must not contain any spaces
+# username must not contain any digits
+
+# username = input("Please Enter Your Name: ")
+# if (len(username) < 12 and username.count( " ") == 0 and username.isdigit() == False):
+#     print("Valid Username, You may proceed...")
+# else: 
+#     print("Invalid username. Please try again")
+
+# Indexing = Accessing elements of a sequence using [] (indexing operator)
+            #[start: end: step]
+credit_card_number = "1234-5678-9012-3456"
+print(credit_card_number[0:4])# NOTE: the ending index is usually excluded
+last_4_digits = credit_card_number[-4:]
+print(f"XXXX-XXXX-XXXX-{last_4_digits}")
+#reversing a string
+print(credit_card_number[::-1])
+
+# format specifiers = {value: flags} format a value based on what
+# flags are inserted
+
+# .(number)f = round to that many decimal places (fixed point)
+# :(number) = allocate that many spaces
+# :03 = allocate and zero pad that many spaces
+# :< = left justify
+# :> = right justify
+# :^ = center align
+# :+ = use a plus sign to indicate positive value
+# place sign to leftmost position
+# = insert a space before positive numbers
+# = comma separator
+
+price1 = 3000.142
+price2 = -9879302.8221
+price3 = 443223.1901
+print(f"Price 1 is ${price1:.2f}")
+print(f"Price 2 is ${price2:.2f}")
+print(f"Price 3 is ${price3:.2f}")
+
+# Each variable will only take ten spaces in total if less than 10.. any variable greater than 10 will exceed the space
+print(f"Price 1 is ${price1:10}")
+print(f"Price 2 is ${price2:10}")
+print(f"Price 3 is ${price3:10}")
+
+# Takes 10 spaces and adds 0's to the back
+print(f"Price 1 is ${price1:010}")
+print(f"Price 2 is ${price2:010}")
+print(f"Price 3 is ${price3:010}")
+
+# Right aligns everything by 10 spaces
+print(f"Price 1 is ${price1:>10}")
+print(f"Price 2 is ${price2:>10}")
+print(f"Price 3 is ${price3:>10}")
+
+# Left aligns everything by 10 spaces
+print(f"Price 1 is ${price1:<10}")
+print(f"Price 2 is ${price2:<10}")
+print(f"Price 3 is ${price3:<10}")
+
+# Makes the character to take a max of ten spaces and centers it there, any variable greater than 10 will exceed the space
+print(f"Price 1 is ${price1:^10}")
+print(f"Price 2 is ${price2:^10}")
+print(f"Price 3 is ${price3:^10}")
+
+# If you have any positive values and you want it to be preceeded by a plus sign.. space instead of plus could also be used
+print(f"Price 1 is ${price1:+}")
+print(f"Price 2 is ${price2:+}")
+print(f"Price 3 is ${price3:+}")
+
+# Separates every thousand by a comma
+print(f"Price 1 is ${price1:,}")
+print(f"Price 2 is ${price2:,}")
+print(f"Price 3 is ${price3:,}")
+
+# Combination of the features
+print(f"Price 1 is ${price1:+,.2f}")
+print(f"Price 2 is ${price2:+,.2f}")
+print(f"Price 3 is ${price3:+,.2f}")
+
+# While loops
+# Ended this session at 1:56:34
+
