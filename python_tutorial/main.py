@@ -396,4 +396,50 @@ print(f"Price 3 is ${price3:+,.2f}")
 
 # While loops
 # Ended this session at 1:56:34
+# food = input("Enter your Food: ")
+# while not food == "q":
+#     print(f"You like {food}")
+#     food = input("Enter your Food: ")
+    
+# FOR LOOP REVERSED FUNCTION
+for x in reversed(range(0,5,2)):
+    print(x)
+# NOTE: to skip over an interatio you can use the continue keyword
 
+# THE TIME MODULE!!!
+import time
+
+# COUNT DOWN TIMER PROGRAM
+# my_time = int(input("Enter your time: "))
+# for x in range(my_time, 0, -1):
+#     seconds = x  % 60
+#     minutes = int(x / 60) % 60
+#     hours = int(x / 3600)
+#     time.sleep(1)
+#     print(f"{hours:02}:{minutes:02}:{seconds:02}")
+    
+
+# print("TIME'S UP!")
+
+# NESTED LOOP
+#NOTE: Usually print statements have end characters that end with \n but we can change that
+for y in range(3):
+    for x in (range(1,10)):
+        print(x, end = "")
+    print()
+
+# COLLECTION
+# List
+# Set
+# Tuple
+# All handled in COS 103
+ 
+fruits = ['apple', 'banana'] 
+fruits_2 = {'apple', 'banana', "guava", "grape", "melon"}
+# print(dir(fruits)) # to list the different methods available in a collection
+# print(help(fruits)) # to explain what the diffrent methods do
+# some stuff - append, remove, insert, sort, clear, reverse, index, count
+
+# sets are immutable and unordered and have no duplicates, everytime you reload it, it prints in a different order
+print(fruits_2)
+# Stopped this session at 2:35:46
