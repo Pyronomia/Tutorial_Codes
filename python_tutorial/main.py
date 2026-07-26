@@ -443,3 +443,106 @@ fruits_2 = {'apple', 'banana', "guava", "grape", "melon"}
 # sets are immutable and unordered and have no duplicates, everytime you reload it, it prints in a different order
 print(fruits_2)
 # Stopped this session at 2:35:46
+
+# Tuples are basically the same as lists but they are unchangeable and you can perform almost the same methods on it
+# NOTE: Tuples are faster than lists so you should try to use them if possible
+
+# Shopping cart program
+food = []
+price = []
+
+# while True:
+#     food_input = input("Enter the food you would like to buy (q to quit):  ")
+#     if (food_input.lower() == "q"):
+#         break
+#     else:
+#         price_input = input("Enter your price: $")
+#     food.append(food_input)
+#     price.append(price_input)
+
+# print("----- YOUR CART -----")
+# for food_item in food:
+#     print(food_item, end = " ")
+    
+
+# final_price = ''
+# for price_1 in price:
+#     final_price += price_1
+# print(f"\nYour final price is {final_price}")
+
+# 2-D Collections
+# Num-pad project
+num_pad = ((1,2,3),
+           (4,5,6),
+           (7,8,9),
+           ("*",0,"#"))
+
+for row in num_pad:
+    for inner_row in row:
+        print(inner_row, end = " ")
+    print(" ")
+
+# PYTHON QUIZ GAME
+# questions = ("What is regarded as the laughing gas?",
+#              "What is another name for calcium oxide?",
+#              "The ore from which Aluminium is extracted from is known as what?",
+#              "Which of the following is a transition metal?",
+#              "What is the boiling point for Nitrogen?")
+
+# options = (("A. N2O", "B. NO", "C. NO2", "D. NO3"),
+#            ("A. Quick Sand", "B. Quick Lime", "C. Quick Clay", "D. Quick Soil"),
+#            ("A. Casserite", "B. Haemetite", "C. Bauxite", "D. Salt-petre"),
+#            ("A. Sodium", "B. Potassium", "C. Zinc", "D. Aluminium"),
+#            ("A. 194", "B. 195", "C. 196", "D. 197"))
+
+# answers = ("A", "B", "C", "C", "C")
+# guesses = []
+# option_index = 0
+# score = 0
+# print_text = "CHEMISTRY TRIVIA"
+# print("------------------")
+# print(f"{print_text:^18}")
+# print("------------------")
+
+# for question in questions:
+#     print(question)
+#     for option in options[option_index]:
+#         print(option)
+
+#     guess_input = input("Enter your Guess: ") 
+#     guesses.append(guess_input) 
+#     if (guess_input.upper() == answers[option_index]):
+#         print("------------------")
+#         print("YOU HAVE GOTTEN IT!")
+#         print("------------------")
+
+#         score += 1
+#     else: 
+#         print("------------------")
+#         print("You did not get the question :(")  
+#         print("------------------")
+
+#     option_index += 1
+
+# result_text = "RESULTS"
+# print("------------------")
+# print(f"{result_text:^19}" )
+# print("------------------")
+# print("Your Guesses are: ", end = "")
+# for guess in guesses: 
+#     print(guess.upper(), end = " ")
+
+# print(" ")
+# print("The Answers are: ", end = "")
+# for answer in answers: 
+#     print(answer, end = " ")
+# score = int(score/5 * 100)
+# print(f"\nYour Score is: {score}% ")
+
+# Dictionaries
+countries = {"USA": "Washington",
+             "Japan": "Tokyo"}
+
+# print(dir(countries))
+# print(help(countries)) To get the keywords and what they do
+print(countries.get("Japan"))
