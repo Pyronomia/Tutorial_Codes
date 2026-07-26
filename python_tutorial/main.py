@@ -545,4 +545,69 @@ countries = {"USA": "Washington",
 
 # print(dir(countries))
 # print(help(countries)) To get the keywords and what they do
-print(countries.get("Japan"))
+print(countries.get("Japan")) # it returns  true when used in an if statement
+countries.update({"China": "Beijing"}) #it updates the dictionary if the element doesnt already exist and it changes  the already existing element  if it does
+print(countries)
+countries.pop("China") # removes a key value
+countries.popitem() # removes the last item
+countries.clear # clears the whole list
+keys = countries.keys()
+# Technically keys is an object which reps a list
+values = countries.values()
+# Technically values is an object which reps a list
+print(values) # you can iterate through it
+
+items = countries.items()
+# this prints the key value pairs in a tuple within a list
+for key, value in items:
+    print(f"{key}:{value}")
+
+# Concession stand program
+
+# menu = {"pizza": 3.00,
+#         "nachos": 4.50,
+#         "popcorn": 6.00,
+#         "fries": 2.50,
+#         "chips": 1.00,
+#         "pretzel": 3.50,
+#         "soda": 3.00,
+#         "lemonade": 4.25}
+
+# cart = []
+# total = 0
+
+# print("----------MENU----------")
+# for key, value in menu.items():
+#     print(f"{key:10}: ${value:.2f}")
+# print("---------------------------")
+
+# while True:
+#     food = input("Select an item (q to quit): ").lower()
+#     if food == "q":
+#         break
+#     elif menu.get(food) is not None:
+#         cart.append(food)
+
+
+# print("------ YOUR ORDER ------")
+# for food in cart:
+#     total += menu.get(food)
+#     print(food, end = " ")
+
+# print()
+# print(f"Your Total is: ${total:.2f}")
+
+
+# RANDOM MODULE
+import random
+low = 1
+high = 100
+options = ("rock", "paper", "scissors")
+cards = ["2","3","4","5","6","7","8","9","10","J","Q", "K","A"]
+
+number = random.randint(low,high) # Selects a random integer between this range
+number = random.random() # Generates a random float
+option = random.choice(options) # picks a random choice between some options
+random.shuffle(cards) # shuffles the items within a list or similar type variable
+print(cards)      
+# Stopped this session at 3:24:29
