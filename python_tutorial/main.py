@@ -611,3 +611,75 @@ option = random.choice(options) # picks a random choice between some options
 random.shuffle(cards) # shuffles the items within a list or similar type variable
 print(cards)      
 # Stopped this session at 3:24:29
+# Stopped this session at 3:52:14
+
+# Function = a block of reusable code
+#            place () after the function name to invoke it
+# I would have written some notes about this but you should have extensive knowledge on it from javasscript bro
+
+def display_invoice(username, amount, due_date):
+    print(f"Hello {username}")
+    print(f"Your bill of ${amount:.2f} is due: {due_date}") 
+
+display_invoice("BroCode", 42.50, "01/01")
+
+# return = statement used to end a function
+#          and send a result back to the caller
+
+def add(x,y):
+    z = x+y
+    return z
+
+print(add(1,2))
+
+# default arguments = A default value for certain parameters default is used when that argumment is omitted make your functions more flexible, reduces # of arguments.. 1. positional, 2. Default, 3. keyword, 4. arbitrary 
+
+
+def net_price(list_price, discount = 0, tax = 0.05):
+    return list_price * (1 - discount) * (1 + tax)
+
+# print(net_price(500))
+print(net_price(500, 0.2))
+# yeah so the default arguments seem pretty useful because that specific parameter might not always need a value
+
+# count up timer
+# def count(end, start = 0): #NOTE: non default arguments should be before default arguments so that if you want to exclude the default argument it wwon't affect you
+    # for x  in range(start, end + 1):
+    #     print(x)
+    #     time.sleep(1)
+    # print("DONE!")
+
+# count(5)
+
+# keyword arguments = an argument preceded by an identifier.. helps with readability.. order of arguments doesn't matter unlike default
+
+def hello(greeting, title, first, last):
+    print(f"{greeting} {title}{first} {last}")
+
+print(hello(f"Hello", last = "SpongeBob", title= "Mr.", first = "Squarepants")) # despite the messed up order it didn't affect
+
+print("1","2","3","4","5", sep = "-")
+
+# arbitrary argument
+# *args = allows you to pass multiple non-key arguments
+# **kwargs = allows you to pass multiple keyword-arguments 
+# * unpacking operator
+
+# when you pass *args as a paramater, it takes your arguments and arranges them into a tuple
+
+def add(*args): # you could use something else apart from args but for convention that's what people use   
+    total = 0
+    for arg in args:
+        total += arg
+    return total
+
+print(add(1,2,3))
+
+def print_address(**kwargs): # the data type of kwargs is a dictionary 
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+print_address(street = "123 Fake St.",
+              city = "Detroit",
+              state = "MI",
+              zip = "54321")
