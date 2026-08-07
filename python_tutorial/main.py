@@ -683,3 +683,7 @@ print_address(street = "123 Fake St.",
               city = "Detroit",
               state = "MI",
               zip = "54321")
+
+# You can use the two of them in combination but the *args has to come first before **kwargs in both  par ameters and the arguments when calling the function
+
+# Stopped this session at 4:30:30
